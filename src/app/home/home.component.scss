@@ -1,0 +1,17 @@
+
+@import '../../styles.scss';
+
+@import "../../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+
+
+
+@include media-breakpoint-down(md) {
+
+  .jumbotron div h1 {
+    font-size: 2.5rem;
+    font-weight: bold ;
+  }
+
+}
+
+

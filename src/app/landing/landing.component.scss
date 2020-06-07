@@ -1,0 +1,14 @@
+@import '../../styles.scss' ;
+
+div.card-footer {   
+   & small.text-muted {color: darkgreen !important ; }
+}
+
+div.card-header {
+   background-color: yellows(06)  !important ;
+
+   & span {
+      color: doranges(09) ;
+      font-size: 1.5rem ;
+   }
+}

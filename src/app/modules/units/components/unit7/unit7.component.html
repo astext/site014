@@ -1,0 +1,24 @@
+<div class="container bg-nick py-3 page-wrap">
+
+  <div class="jumbotron jumbotron-fluid bg-order65 text-anthony">
+    <div class="container">
+      <h1 class="display-4">Unit 7 - List of tracks</h1>
+      <p class="lead font-weight-bold"> <span class="material-icons">copyright</span> {{copyright}}</p>
+
+    </div>
+  </div>
+
+
+ 	<div>
+    
+
+    <div *ngFor="let track of tracks">
+      <div>
+        Year {{ track.name.year }}
+      </div>
+
+
+    </div>
+
+        
+	</div>

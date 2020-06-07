@@ -1,0 +1,64 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+music box specific
+current: site011  
+
+import into each unit for standard presentation of each page with audio items
+
+Anthony Sallis
+16 March 2019  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+$music-item-border: thin solid red !default;
+$music-item-width: 100% !default;
+$music-item-height: 15rem !default;
+$music-item-padding: 4% !default;
+$music-item-margin-bottom: 1rem !default;
+
+$mb-title-size: 1.25rem !default;
+$mb-title-colour: darkgreen !default ;
+
+$mb-caption-size: 1.25rem !default;
+$mb-caption-colour: rgb(4, 11, 34) !default ;
+
+.music-box-item {
+  /* border: $music-item-border; */
+  min-height: $music-item-height;
+  width: $music-item-width;
+  padding: $music-item-padding;
+  margin-bottom: $music-item-margin-bottom ;
+
+    .mb-title {
+      color: $mb-title-colour ;
+      font-size: $mb-title-size;
+      font-weight: 700 ;
+      padding-bottom: .5rem;
+    }  
+
+    .mb-caption {
+        color: $mb-caption-colour ;
+        font-size: $mb-caption-size ;
+        font-weight: 400 ;
+    }
+
+    .mb-audio {
+      padding-top: 1rem;
+    }
+
+    
+}
+
+
+// cabinet
+
+.my-submenu .nav-link.active,
+.nav-pills .show>.nav-link {
+  background-color: white !important;
+  color: black;
+}
+
+.cabinet-tab {
+
+  .card { margin-bottom: 1rem;} 
+}
+
+

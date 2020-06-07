@@ -1,0 +1,82 @@
+<div class="container bg-peter pb-3 page-wrap">
+
+  <div class="jumbotron jumbotron-fluid bg-john text-anthony">
+    <div class="container">
+      <h1 class="display-4">The primitive VST series</h1>
+      <p class="lead font-weight-bold"> <span class="material-icons">copyright</span> {{copyright}}</p>
+
+    </div>
+  </div>
+
+  <div class="card">
+      <h5 class="card-header">
+          Made with Tunafish &amp; VSTs
+        <div class="text-center">
+          <button class="btn btn-outline-order65" (click)="show = !show">{{show ? 'Hide notes' : 'Show notes'}} </button></div>
+        <!-- <ng-template #elseBlock> - background to ... </ng-template> -->
+      </h5>
+       <!-- <div class="card-body" *ngIf="show; else elseBlock"> -->
+    <div class="card-body" *ngIf="show">
+        <h5 class="card-title"></h5>
+        <div class="alert alert-warning" role="alert">
+          <h4 class="alert-heading"> 32 bit software, 32 bit PCs</h4>
+          <p>Around 160 pieces were conceived. Not every one was successful, but I am still pleased by half of them. Some of the tracks below are also available on SoundCloud as pre 2018 lower quality mixes. The versions below are newly reworked in 320kbps mp3. I used <a href="http://www.audiomelody.com/software/tunafish/" target="_blank">Tunafish</a>
+            and freeware VST synths for all tracks, before Ableton was available. Tunafish is made
+            by <a href="http://www.audiomelody.com/developer/brambos/">the creator of Moonfish and TU2/Tuareg</a>
+            also fascinating and worthwhile digital tools. The high version numbers are partly due to the fact that Tunafish crashed often, so I had to be very proactive in saving work. Or because I really did hammer them that many times! I have included the rough with the smooth here to memorialise the primitive tools and the imperfections of my musical skills at the time.</p>
+          <hr>
+          <p class="mb-0">&copy; Anthony Sallis</p>
+        </div>
+  
+      </div>
+    </div>
+  
+    <br>
+
+    <div class="container">
+        <div class="row">
+          <div class="col-lg col-md-12">
+    
+            <div class="music-box-item bg-light shadow" *ngFor="let comps of unit3compositions">
+    
+              <div class="mb-title dont-break-out">
+                {{comps.title}}
+              </div>
+              <div class="mb-caption">
+                {{comps.caption}}
+              </div>
+    
+              <div class="mb-audio">
+                <audio controls>
+                  <source src="{{comps.source}}" type="audio/mp3">
+                  <p>Your browser doesn't support HTML5 audio. Here is
+                    a <a href="{{comps.source}}">link to the audio</a> instead.</p>
+                </audio>
+              </div>
+    
+              <div class="mb-metadata">
+                <small class="text-muted"><strong>Year:</strong> {{comps.year}} <strong class="pl-3">Key:</strong>
+                  {{comps.key}}</small>
+              </div>
+    
+            </div>
+    
+    
+    
+          </div>
+    
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>

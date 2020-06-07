@@ -1,0 +1,374 @@
+// xferred from unit5
+
+.swatch-inhouse {
+
+  &01 {
+    //background-color: map-get($inhousePalette, 01);
+    background-color: inhouse(01);
+  }
+
+  &02 {
+    background-color: inhouse(02);
+  }
+
+  &03 {
+    background-color: inhouse(03);
+  }
+
+  &04 {
+    background-color: inhouse(04);
+  }
+
+  &05 {
+    background-color: inhouse(05);
+  }
+
+  &06 {
+    background-color: inhouse(06);
+    color: #000000;
+  }
+
+  &07 {
+    background-color: inhouse(07);
+    //color: #ffffff;
+  }
+
+}
+
+.yellows-box {
+  color: #000000;
+}
+
+.swatch-yellows {
+
+  &01 {
+    background-color: yellows(01);
+  }
+
+  &02 {
+    background-color: yellows(02);
+  }
+
+  &03 {
+    background-color: yellows(03);
+  }
+
+  &04 {
+    background-color: yellows(04);
+  }
+
+  &05 {
+    background-color: yellows(05);
+  }
+
+  &06 {
+    background-color: yellows(06);
+  }
+
+  &07 {
+    background-color: yellows(07);
+  }
+
+  &08 {
+    background-color: yellows(08);
+  }
+
+  &09 {
+    background-color: yellows(09);
+  }
+
+  &10 {
+    background-color: yellows(10);
+  }
+
+  &11 {
+    background-color: yellows(11);
+  }
+
+  &12 {
+    background-color: yellows(12);
+  }
+
+}
+
+
+.blues-box {
+  color: #ffffff;
+}
+
+.swatch-blues {
+
+  &01 {
+    background-color: blues(01);
+  }
+
+  &02 {
+    background-color: blues(02);
+  }
+
+  &03 {
+    background-color: blues(03);
+  }
+
+  &04 {
+    background-color: blues(04);
+  }
+
+  &05 {
+    background-color: blues(05);
+  }
+
+  &06 {
+    background-color: blues(06);
+  }
+
+  &07 {
+    background-color: blues(07);
+  }
+
+  &08 {
+    background-color: blues(08);
+  }
+
+  &09 {
+    background-color: blues(09);
+  }
+
+  &10 {
+    background-color: blues(10);
+  }
+
+  &11 {
+    background-color: blues(11);
+  }
+
+  &12 {
+    background-color: blues(12);
+  }
+
+}
+
+.doranges-box {
+  color: #ffffff;
+}
+
+.swatch-doranges {
+
+  &01 {
+    background-color: doranges(01);
+  }
+
+  &02 {
+    background-color: doranges(02);
+  }
+
+  &03 {
+    background-color: doranges(03);
+  }
+
+  &04 {
+    background-color: doranges(04);
+  }
+
+  &05 {
+    background-color: doranges(05);
+  }
+
+  &06 {
+    background-color: doranges(06);
+  }
+
+  &07 {
+    background-color: doranges(07);
+  }
+
+  &08 {
+    background-color: doranges(08);
+  }
+
+  &09 {
+    background-color: doranges(09);
+  }
+
+  &10 {
+    background-color: doranges(10);
+  }
+
+  &11 {
+    background-color: doranges(11);
+  }
+
+  &12 {
+    background-color: doranges(12);
+  }
+
+}
+
+
+.dgreens-box {
+  color: #ffffff;
+}
+
+.swatch-dgreens {
+
+  &01 {
+    background-color: dgreens(01);
+  }
+
+  &02 {
+    background-color: dgreens(02);
+  }
+
+  &03 {
+    background-color: dgreens(03);
+  }
+
+  &04 {
+    background-color: dgreens(04);
+  }
+
+  &05 {
+    background-color: dgreens(05);
+  }
+
+  &06 {
+    background-color: dgreens(06);
+  }
+
+  &07 {
+    background-color: dgreens(07);
+  }
+
+  &08 {
+    background-color: dgreens(08);
+  }
+
+  &09 {
+    background-color: dgreens(09);
+  }
+
+  &10 {
+    background-color: dgreens(10);
+  }
+
+  &11 {
+    background-color: dgreens(11);
+  }
+
+  &12 {
+    background-color: dgreens(12);
+  }
+
+}
+
+.dpurples-box {
+  color: #ffffff;
+}
+
+.swatch-dpurples {
+
+  &01 {
+    background-color: dpurples(01);
+  }
+
+  &02 {
+    background-color: dpurples(02);
+  }
+
+  &03 {
+    background-color: dpurples(03);
+  }
+
+  &04 {
+    background-color: dpurples(04);
+  }
+
+  &05 {
+    background-color: dpurples(05);
+  }
+
+  &06 {
+    background-color: dpurples(06);
+  }
+
+  &07 {
+    background-color: dpurples(07);
+  }
+
+  &08 {
+    background-color: dpurples(08);
+  }
+
+  &09 {
+    background-color: dpurples(09);
+  }
+
+  &10 {
+    background-color: dpurples(10);
+  }
+
+  &11 {
+    background-color: dpurples(11);
+  }
+
+  &12 {
+    background-color: dpurples(12);
+  }
+
+}
+
+.dbrowns-box {
+  color: #ffffff;
+}
+
+.swatch-dbrowns {
+
+  &01 {
+    background-color: dbrowns(01);
+  }
+
+  &02 {
+    background-color: dbrowns(02);
+  }
+
+  &03 {
+    background-color: dbrowns(03);
+  }
+
+  &04 {
+    background-color: dbrowns(04);
+  }
+
+  &05 {
+    background-color: dbrowns(05);
+  }
+
+  &06 {
+    background-color: dbrowns(06);
+  }
+
+  &07 {
+    background-color: dbrowns(07);
+  }
+
+  &08 {
+    background-color: dbrowns(08);
+  }
+
+  &09 {
+    background-color: dbrowns(09);
+  }
+
+  &10 {
+    background-color: dbrowns(10);
+  }
+
+  &11 {
+    background-color: dbrowns(11);
+  }
+
+  &12 {
+    background-color: dbrowns(12);
+  }
+
+}

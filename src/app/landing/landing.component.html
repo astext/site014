@@ -1,0 +1,34 @@
+<div class="container bg-warning pb-3 page-wrap">
+
+  <div class="jumbotron jumbotron-fluid bg-john text-anthony">
+    <div class="container">
+      <h1 class="display-4">Music boxes </h1>
+      <p class="lead font-weight-bold"> <span class="material-icons">copyright</span> {{copyright}}</p>
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col-sm-12">
+      <ng-container *ngFor="let content of contents">
+        <div class="card shadow border border-order65 mb-3" *ngIf="this.content.show">
+          <div class="card-header"><span>{{ this.content.id }}</span></div>
+          <div class="card-body">
+            <h2 class="card-title font-32 text-order65">{{ this.content.title }}</h2>
+            <p class="card-text font-22">{{ this.content.info }}</p>
+            <p class="card-text">{{ this.content.using }}</p>
+            <a href="{{ this.content.link }}" routerLink="{{ this.content.link }}" class="btn btn-lg btn-nick stretched-link shadow"
+              attr.aria-label="go to unit {{ this.content.id }}">
+              Go there</a>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted font-weight-bolder">{{ this.content.date }}</small>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+
+
+</div>

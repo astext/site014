@@ -1,0 +1,737 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+astextnet custom theme
+mods for site011  
+
+Anthony Sallis
+22 April 2019  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+// all pages 
+//$page-padding-top: 4.5rem !default;
+$page-padding-top: 2.5rem !default;
+
+div.container.page-wrap {
+  padding-top: $page-padding-top !important;
+  padding-bottom: $page-padding-top !important;
+}
+
+@media (max-width: 575.98px) {
+  audio {
+    width: 240px !important;
+  }
+}
+
+
+.dont-break-out {
+
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+
+}
+
+/* misc */
+
+a:hover {
+  background: gold;
+  color: rgb(24, 0, 24) !important;
+}
+
+:focus {
+  outline-color: rgb(219, 17, 219) !important;
+  outline-style: outset !important;
+}
+
+div.card-body a.btn:focus,
+button.btn:focus {
+  outline: 3px outset rgb(219, 17, 219) !important;
+}
+
+
+/* base ribbon */
+$base-ribbon-size: 24px;
+$base-ribbon-bg: #cdcdcd;
+
+.base-ribbon {
+  font-size: $base-ribbon-size;
+  background-color: $base-ribbon-bg;
+
+}
+
+.top-ribbonstyle {
+  background-color: #fffff0;
+  border-bottom: thin solid #999;
+}
+
+/* home icon */
+
+header.router-nav nav {
+  padding-top: 4px !important;
+  padding-bottom: 0px !important;
+
+  a {
+    .navbar-brand {
+      padding-top: 1rem !important;
+    }
+
+    .material-icons {
+      font-size: 48px !important;
+    }
+  }
+}
+
+// page-wraps
+.page-wrap.page01 {
+  padding-top: 2rem !important;
+}
+
+.page-wrap.page02 {
+  padding-top: 4rem !important;
+}
+
+/* table chequered */
+
+$tbl-chqrow-odd: rgba(0, 0, 0, 0.05);
+$tbl-chqrow-oddcell-even: rgba(50, 0, 0, 0.05) !important; //lighten the central square
+$tbl-chqcell-even: rgba(150, 0, 0, 0.05);
+
+.table-chequered {
+  thead {
+    th:nth-of-type(even) {
+      background-color: $tbl-chqrow-oddcell-even;
+    }
+  }
+
+  tbody {
+    tr:nth-of-type(odd) {
+      background-color: $tbl-chqrow-odd;
+
+      td:nth-of-type(even) {
+        background-color: $tbl-chqrow-oddcell-even;
+      }
+    }
+
+    tr td:nth-of-type(even) {
+      background-color: $tbl-chqcell-even;
+    }
+  }
+}
+
+// responsive table cards for smaller views
+@media (max-width: 767.98px) {
+
+  table,
+  thead,
+  th,
+  tbody,
+  tr,
+  td {
+    display: block !important;
+  }
+
+  thead th {
+    display: none !important;
+  }
+
+  .table-chequered tbody tr:nth-of-type(odd) td:nth-of-type(even) {
+    background-color: #fff !important;
+  }
+
+}
+
+// https://css-tricks.com/responsive-data-tables/
+// thank you very much
+
+/* font families */
+$font-fams: () !default;
+$font-fams: map-merge(('cn': "courier new",
+'a': "arial",
+'tnr': "times new roman",
+'hlv': "helvetica",
+'cs': "comic sans ms",
+'vrd': "verdana"
+), $font-fams);
+
+@each $name,
+$value in $font-fams {
+  .ff-#{$name} {
+    font-family: $value;
+  }
+}
+
+/* new colours for new themes */
+
+$red-ant: #fffd85 !default; //
+$choc-mid: #c2571a !default; // AA darkest coral?
+$mint-daffodil: #c6e96e !default; // AA darkest kelly
+$blue-flash: #093145 !default; //AAA darkest indigo
+$emerald-pool: #26d01b !default;
+$amber-sun: #ffcc00 !default; // hi contrast yellow
+$green-skin: #5f365c !default;
+$pink-rose: #eb5844 !default; // AA ruby
+$sombre-reptile: #332f2f !default;
+$astext-pcolour: #0079ca !default; // theme primary colour
+$astext-scolour: #6c757d !default; // theme secondary colour
+
+$colors: () !default;
+$colors: map-merge(("red-ant": $red-ant,
+"choc-mid": $choc-mid,
+"mint-daffodil": $mint-daffodil,
+"blue-flash": $blue-flash,
+"emerald-pool": $emerald-pool,
+"amber-sun": $amber-sun,
+"green-skin": $green-skin,
+"pink-rose": $pink-rose,
+"sombre-reptile": $sombre-reptile,
+"astextprimary": $astext-pcolour,
+"astextsecondary": $astext-scolour), $colors);
+
+$anthony: $red-ant !default;
+$darkcoral: $choc-mid !default;
+$hieu: $mint-daffodil !default;
+$john: $blue-flash !default;
+$order65: $sombre-reptile !default;
+$maria: $emerald-pool !default;
+$nick: $amber-sun !default;
+$peter: $green-skin !default;
+$ruby: $pink-rose !default;
+$astextprimary: $astext-pcolour !default;
+$astextsecondary: $astext-scolour !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge(("anthony": $anthony,
+"darkcoral": $darkcoral,
+"hieu": $hieu,
+"john": $john,
+"maria": $maria,
+"nick": $nick,
+"peter": $peter,
+"ruby": $ruby,
+"order65": $order65,
+"astextprimary": $astextprimary,
+"astextsecondary": $astextsecondary), $theme-colors);
+
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-caret: true !default;
+$enable-rounded: true !default;
+$enable-shadows: true !default;
+$enable-gradients: true !default;
+$enable-transitions: true !default;
+$enable-hover-media-query: false !default;
+$enable-grid-classes: true !default;
+$enable-print-styles: true !default;
+
+/* some inhouse colours */
+
+$darkbrown: #654321 !default;
+$darkbrownsat: saturate(#654321, 20%) !default;
+$darkpurple: #4f0e5a !default;
+$darkgreen: #006400 !default;
+$darkorange: #e22510 !default;
+$brightblue: #0000CD !default;
+$paleyellow: #ffffb8 !default;
+$hivisyellow: #ffcc00 !default;
+$hivisyellowhue: adjust-hue(#ffcc00, 15%) !default;
+$navyblue: #000080 !default;
+
+// palette map the inhouse colours
+
+$inhousePalette: () !default;
+
+$inhousePalette: map-merge((01: $darkbrown,
+02: $darkpurple,
+03: $darkgreen,
+04: $darkorange,
+05: $brightblue,
+06: $hivisyellow,
+07: $navyblue),
+$inhousePalette);
+
+
+// function out inhousePalette
+@function inhouse($key) {
+  @if map-has-key($inhousePalette, $key) {
+    @return map-get($inhousePalette, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $inhousePalette.";
+  @return null;
+}
+
+// use: background-color: inhouse(02) ;
+
+// yellows
+
+$yellows01: adjust-hue($hivisyellow, 10%) !default;
+$yellows02: adjust-hue($hivisyellow, 30%) !default;
+$yellows03: adjust-hue($hivisyellow, 50%) !default;
+$yellows04: adjust-hue($hivisyellow, 70%) !default;
+$yellows05: lighten($hivisyellow, 10%) !default;
+$yellows06: lighten($hivisyellow, 25%) !default;
+$yellows07: saturate($hivisyellow, 15%) !default;
+$yellows08: darken($hivisyellow, 15%) !default;
+$yellows09: desaturate($hivisyellow, 10%) !default;
+$yellows10: desaturate($hivisyellow, 30%) !default;
+$yellows11: desaturate($hivisyellow, 50%) !default;
+$yellows12: desaturate($hivisyellow, 80%) !default;
+
+
+// palette map yellows
+
+$yellowsPalette: () !default;
+
+$yellowsPalette: map-merge((01: $yellows01,
+02: $yellows02,
+03: $yellows03,
+04: $yellows04,
+05: $yellows05,
+06: $yellows06,
+07: $yellows07,
+08: $yellows08,
+09: $yellows09,
+10: $yellows10,
+11: $yellows11,
+12: $yellows12),
+$yellowsPalette);
+
+// function out yellowsPalette
+@function yellows($key) {
+  @if map-has-key($yellowsPalette, $key) {
+    @return map-get($yellowsPalette, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $yellowsPalette.";
+  @return null;
+}
+
+// use: background-color: yellows(02) ;
+
+// blues
+
+$blues01: adjust-hue($brightblue, 5%) !default;
+$blues02: adjust-hue($brightblue, 15%) !default;
+$blues03: adjust-hue($brightblue, 25%) !default;
+$blues04: adjust-hue($brightblue, 40%) !default;
+$blues05: invert($brightblue, 10%) !default;
+$blues06: invert($brightblue, 25%) !default;
+$blues07: invert($brightblue, 35%) !default;
+$blues08: invert($brightblue, 45%) !default;
+$blues09: desaturate($brightblue, 10%) !default;
+$blues10: desaturate($brightblue, 30%) !default;
+$blues11: desaturate($brightblue, 50%) !default;
+$blues12: desaturate($brightblue, 70%) !default;
+
+
+// palette map blues
+
+$bluesPalette: () !default;
+
+$bluesPalette: map-merge((01: $blues01,
+02: $blues02,
+03: $blues03,
+04: $blues04,
+05: $blues05,
+06: $blues06,
+07: $blues07,
+08: $blues08,
+09: $blues09,
+10: $blues10,
+11: $blues11,
+12: $blues12),
+$bluesPalette);
+
+// function out bluesPalette
+@function blues($key) {
+  @if map-has-key($bluesPalette, $key) {
+    @return map-get($bluesPalette, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $bluesPalette.";
+  @return null;
+}
+
+// use: background-color: blues(02) ;
+
+
+// dark oranges
+
+$doranges01: adjust-hue($darkorange, 10%) !default;
+$doranges02: adjust-hue($darkorange, 30%) !default;
+$doranges03: adjust-hue($darkorange, 50%) !default;
+$doranges04: adjust-hue($darkorange, 70%) !default;
+$doranges05: invert($darkorange, 10%) !default;
+$doranges06: invert($darkorange, 25%) !default;
+$doranges07: invert($darkorange, 35%) !default;
+$doranges08: invert($darkorange, 45%) !default;
+$doranges09: desaturate($darkorange, 10%) !default;
+$doranges10: desaturate($darkorange, 30%) !default;
+$doranges11: desaturate($darkorange, 50%) !default;
+$doranges12: desaturate($darkorange, 70%) !default;
+
+
+// palette map doranges
+
+$dorangesPalette: () !default;
+
+$dorangesPalette: map-merge((01: $doranges01,
+02: $doranges02,
+03: $doranges03,
+04: $doranges04,
+05: $doranges05,
+06: $doranges06,
+07: $doranges07,
+08: $doranges08,
+09: $doranges09,
+10: $doranges10,
+11: $doranges11,
+12: $doranges12),
+$dorangesPalette);
+
+// function out bluesPalette
+@function doranges($key) {
+  @if map-has-key($dorangesPalette, $key) {
+    @return map-get($dorangesPalette, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $dorangesPalette.";
+  @return null;
+}
+
+// use: background-color: doranges(02) ;
+
+
+// dark greens
+
+$dgreens01: adjust-hue($darkgreen, 10%) !default;
+$dgreens02: adjust-hue($darkgreen, 30%) !default;
+$dgreens03: adjust-hue($darkgreen, 50%) !default;
+$dgreens04: adjust-hue($darkgreen, 70%) !default;
+$dgreens05: invert($darkgreen, 10%) !default;
+$dgreens06: invert($darkgreen, 25%) !default;
+$dgreens07: invert($darkgreen, 35%) !default;
+$dgreens08: invert($darkgreen, 45%) !default;
+$dgreens09: desaturate($darkgreen, 10%) !default;
+$dgreens10: desaturate($darkgreen, 30%) !default;
+$dgreens11: desaturate($darkgreen, 50%) !default;
+$dgreens12: desaturate($darkgreen, 70%) !default;
+
+
+// palette map dgreens
+
+$dgreensPalette: () !default;
+
+$dgreensPalette: map-merge((01: $dgreens01,
+02: $dgreens02,
+03: $dgreens03,
+04: $dgreens04,
+05: $dgreens05,
+06: $dgreens06,
+07: $dgreens07,
+08: $dgreens08,
+09: $dgreens09,
+10: $dgreens10,
+11: $dgreens11,
+12: $dgreens12),
+$dgreensPalette);
+
+// function out dgreensPalette
+@function dgreens($key) {
+  @if map-has-key($dgreensPalette, $key) {
+    @return map-get($dgreensPalette, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $dgreensPalette.";
+  @return null;
+}
+
+// use: background-color: dgreens(02) ;
+
+
+// dark purple
+
+$dpurples01: adjust-hue($darkpurple, 10%) !default;
+$dpurples02: adjust-hue($darkpurple, 30%) !default;
+$dpurples03: adjust-hue($darkpurple, 50%) !default;
+$dpurples04: adjust-hue($darkpurple, 70%) !default;
+$dpurples05: invert($darkpurple, 10%) !default;
+$dpurples06: invert($darkpurple, 25%) !default;
+$dpurples07: invert($darkpurple, 35%) !default;
+$dpurples08: invert($darkpurple, 45%) !default;
+$dpurples09: desaturate($darkpurple, 10%) !default;
+$dpurples10: desaturate($darkpurple, 30%) !default;
+$dpurples11: desaturate($darkpurple, 50%) !default;
+$dpurples12: desaturate($darkpurple, 60%) !default;
+
+
+// palette map dgreens
+
+$dpurplesPalette: () !default;
+
+$dpurplesPalette: map-merge((01: $dpurples01,
+02: $dpurples02,
+03: $dpurples03,
+04: $dpurples04,
+05: $dpurples05,
+06: $dpurples06,
+07: $dpurples07,
+08: $dgreens08,
+09: $dpurples09,
+10: $dpurples10,
+11: $dpurples11,
+12: $dpurples12),
+$dpurplesPalette);
+
+// function out dpurplesPalette
+@function dpurples($key) {
+  @if map-has-key($dpurplesPalette, $key) {
+    @return map-get($dpurplesPalette, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $dpurplesPalette.";
+  @return null;
+}
+
+// use: background-color: dpurples(02) ;
+
+//
+
+// dark brown
+
+$dbrowns01: adjust-hue($darkbrown, 10%) !default;
+$dbrowns02: adjust-hue($darkbrown, 30%) !default;
+$dbrowns03: adjust-hue($darkbrown, 50%) !default;
+$dbrowns04: adjust-hue($darkbrown, 70%) !default;
+$dbrowns05: invert($darkbrown, 10%) !default;
+$dbrowns06: invert($darkbrown, 25%) !default;
+$dbrowns07: invert($darkbrown, 35%) !default;
+$dbrowns08: invert($darkbrown, 45%) !default;
+$dbrowns09: desaturate($darkbrown, 10%) !default;
+$dbrowns10: desaturate($darkbrown, 30%) !default;
+$dbrowns11: desaturate($darkbrown, 50%) !default;
+$dbrowns12: ddarken($darkbrown, 50%) !default;
+
+
+// palette map dgreens
+
+$dbrownsPalette: () !default;
+
+$dbrownsPalette: map-merge((01: $dbrowns01,
+02: $dbrowns02,
+03: $dbrowns03,
+04: $dbrowns04,
+05: $dbrowns05,
+06: $dbrowns06,
+07: $dbrowns07,
+08: $dbrowns08,
+09: $dbrowns09,
+10: $dbrowns10,
+11: $dbrowns11,
+12: $dbrowns12),
+$dbrownsPalette);
+
+// function out dbrownsPalette
+@function dbrowns($key) {
+  @if map-has-key($dbrownsPalette, $key) {
+    @return map-get($dbrownsPalette, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $dbrownsPalette.";
+  @return null;
+}
+
+// use: background-color: dbrowns(02) ;
+
+
+
+
+
+.bg-paleyellow {
+  background-color: $paleyellow;
+}
+
+.hivis {
+  background-color: $hivisyellow;
+  color: #000;
+}
+
+.hivishue {
+  background-color: $hivisyellowhue;
+}
+
+.bg-hivis {
+  background-color: #000;
+  color: $hivisyellow;
+}
+
+.brightblue {
+  color: $brightblue;
+  background-color: #fff;
+}
+
+.bg-brightblue {
+  background-color: $brightblue;
+  color: #fff;
+
+  code {
+    color: $hivisyellow;
+  }
+}
+
+.navyblue {
+  color: $navyblue;
+  background-color: #fff;
+}
+
+.bg-navyblue {
+  background-color: $navyblue;
+  color: #fff;
+
+  code {
+    color: $hivisyellow;
+  }
+}
+
+.darkpurple {
+  color: $darkpurple;
+}
+
+.bg-darkpurple {
+  background-color: $darkpurple;
+  color: #fff;
+}
+
+.darkgreen {
+  color: $darkgreen;
+}
+
+.bg-darkgreen {
+  background-color: $darkgreen;
+  color: #fff;
+}
+
+.darkorange {
+  color: $darkorange;
+}
+
+.bg-darkorange {
+  background-color: $darkorange;
+  color: #fff;
+}
+
+.darkbrown {
+  color: $darkbrown;
+}
+
+.bg-darkbrown {
+  background-color: $darkbrown;
+  color: #fff;
+}
+
+/* spacing extended */
+
+$spacer: 1rem;
+$spacers: () !default;
+$spacers: map-merge((6: ($spacer * 2),
+7: ($spacer * 2.5),
+8: ($spacer * 3),
+9: ($spacer * 3.5),
+10: ($spacer * 4),
+11: ($spacer * 4.5),
+12: ($spacer * 5)), $spacers);
+
+/** font size base **/
+$font-size-base: 1rem;
+
+/* size multiplier */
+@function sizeMultiplier($c: 1, $m: $font-size-base) {
+  @return $c * $m;
+}
+
+
+/* multiply wfont weight values */
+@function weightMultiplier($c: 0, $m: 100) {
+  @if $c>0 {
+    @return $c * $m;
+  }
+
+  @else {
+    @return normal;
+  }
+}
+
+$font-sizes: () !default;
+$font-sizes: map-merge((8: sizeMultiplier(.5),
+10: sizeMultiplier(.625),
+12: sizeMultiplier(.75),
+13: sizeMultiplier(.8125),
+14: sizeMultiplier(.875),
+16: sizeMultiplier(1),
+18: sizeMultiplier(1.125),
+20: sizeMultiplier(1.25),
+22: sizeMultiplier(1.375),
+24: sizeMultiplier(1.5),
+26: sizeMultiplier(1.625),
+28: sizeMultiplier(1.75),
+30: sizeMultiplier(1.875),
+32: sizeMultiplier(2),
+34: sizeMultiplier(2.125),
+36: sizeMultiplier(2.25),
+38: sizeMultiplier(2.375),
+40: sizeMultiplier(2.5),
+42: sizeMultiplier(2.625),
+44: sizeMultiplier(2.75),
+46: sizeMultiplier(2.875),
+48: sizeMultiplier(3),
+50: sizeMultiplier(3.125)), $font-sizes);
+
+$font-weights: () !default;
+$font-weights: map-merge((0: weightMultiplier(),
+1: weightMultiplier(1),
+2: weightMultiplier(2),
+3: weightMultiplier(3),
+4: weightMultiplier(4),
+5: weightMultiplier(5),
+6: weightMultiplier(6),
+7: weightMultiplier(7),
+8: weightMultiplier(8),
+9: weightMultiplier(9)), $font-weights);
+
+$font-styles: () !default;
+$font-styles: map-merge(('n': normal,
+'i': italic,
+'o': oblique), $font-styles);
+
+@each $name,
+$value in $font-weights {
+  .fw-#{$name} {
+    font-weight: $value;
+  }
+}
+
+@each $name,
+$value in $font-styles {
+  .fs-#{$name} {
+    font-style: $value;
+  }
+}
+
+@each $name,
+$value in $font-sizes {
+  .font-#{$name} {
+    font-size: $value;
+  }
+}

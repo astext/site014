@@ -1,0 +1,12 @@
+@import "../../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+
+@include media-breakpoint-down(md) {
+
+  .navbar-collapse.collapse.show {
+    background-color: ivory;
+    height: 12rem;
+    overflow-y: scroll;
+
+  }
+
+}
