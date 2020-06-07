@@ -18,7 +18,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve -o",
-    "build": "ng build --prod=true --optimization=true --sourceMap=false --aot --build-optimizer=true --base-href=/site013/",
+    "build": "ng build --prod=true --optimization=true --sourceMap=false --aot --build-optimizer=true --base-href=/site014/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
