@@ -1,10 +1,24 @@
 {
   "name": "site014",
-  "version": "0.0.0",
+  "version": "5.0.0",
+  "repository": "https://github.com/astext/site014",
+  "description": "Web development and original music by Anthony Sallis",
+  "keywords": [
+    "Angular",
+    "Bootstrap",
+    "original music",
+    "electronic",
+    "Ableton Live",
+    "web development"
+  ],
+  "author": "Anthony Sallis <astext@gmail.com> (http://astext.net/)",
+  "contributors": [
+    "Anthony Sallis <astext@gmail.com> (http://astext.net/)"
+  ],
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "ng serve -o",
+    "build": "ng build --prod=true --optimization=true --sourceMap=false --aot --build-optimizer=true --base-href=/site013/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -19,8 +33,12 @@
     "@angular/platform-browser": "~9.1.9",
     "@angular/platform-browser-dynamic": "~9.1.9",
     "@angular/router": "~9.1.9",
+    "@popperjs/core": "^2.4.0",
+    "bootstrap": "^4.5.0",
+    "jquery": "^3.5.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
+    "web-animations-js": "^2.3.2",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
