@@ -34,7 +34,7 @@
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/material-design-icons/iconfont/material-icons.css"
+              "node_modules/material-design-icons-iconfont/dist/material-design-icons.css"
             ],
             "scripts": ["node_modules/web-animations-js/web-animations.min.js",
               "node_modules/jquery/dist/jquery.min.js",

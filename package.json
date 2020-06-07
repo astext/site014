@@ -36,6 +36,7 @@
     "@popperjs/core": "^2.4.0",
     "bootstrap": "^4.5.0",
     "jquery": "^3.5.1",
+    "material-design-icons-iconfont": "^5.0.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "web-animations-js": "^2.3.2",
