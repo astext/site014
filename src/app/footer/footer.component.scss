@@ -1,6 +1,18 @@
 
 @import "../../../node_modules/bootstrap/scss/bootstrap-grid.scss" ;
 
+
+.base-ribbon-link {
+
+  & a {
+      color: #ffffff !important;
+
+  }
+
+}
+
+
+
 @include media-breakpoint-down(md) { 
 
     div.base-ribbon {

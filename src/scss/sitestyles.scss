@@ -740,7 +740,6 @@ $value in $font-sizes {
   }
 }
 
-
 // gradients
 
 .linear-grad {
@@ -751,6 +750,9 @@ $value in $font-sizes {
   background: linear-gradient(288deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
 }
 
+.linear-grad3 {
+  background: linear-gradient(288deg, rgba(147,159,151,1) 0%, rgba(164,142,87,1) 100%);
+}
 
 .text-shadow {
   text-shadow: 1px 1px 12px #00ffad, 0 0 1em #6eff00, 0 0 0.2em #ff0076;
