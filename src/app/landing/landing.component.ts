@@ -11,7 +11,7 @@ declare var require: any;
 })
 export class LandingComponent implements OnInit {
 
-  copyright = "2019 Anthony Sallis";
+  copyright = "2020 Anthony Sallis";
   page = "Landing";
 
  
