@@ -53,11 +53,12 @@ a:hover {
 :focus {
   outline-color: rgb(219, 17, 219) !important;
   outline-style: outset !important;
+  outline-width: medium;
 }
 
 div.card-body a.btn:focus,
 button.btn:focus {
-  outline: 3px outset rgb(219, 17, 219) !important;
+  outline: medium outset rgb(219, 17, 219) !important;
 }
 
 
