@@ -48,6 +48,9 @@ div.container.page-wrap {
 a:hover {
   background: gold;
   color: rgb(24, 0, 24) !important;
+  outline-color: rgb(219, 17, 219) !important;
+  outline-style: outset !important;
+  outline-width: medium;
 }
 
 :focus {
