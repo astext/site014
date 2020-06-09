@@ -36,11 +36,14 @@
               "src/styles.scss",
               "node_modules/material-design-icons-iconfont/dist/material-design-icons.css"
             ],
-            "scripts": ["node_modules/web-animations-js/web-animations.min.js",
+            "scripts": [
+              "node_modules/web-animations-js/web-animations.min.js",
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/@popperjs/core/dist/umd/popper.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "src/assets/project.js"]
+              "node_modules/howler/dist/howler.min.js",
+              "src/assets/project.js"
+            ]
           },
           "configurations": {
             "production": {
