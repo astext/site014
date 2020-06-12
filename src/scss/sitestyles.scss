@@ -757,3 +757,8 @@ $value in $font-sizes {
 .text-shadow {
   text-shadow: 1px 1px 12px #00ffad, 0 0 1em #6eff00, 0 0 0.2em #ff0076;
 }
+
+
+.linear-grad4 {
+  background: linear-gradient(221deg, rgba(230,197,36,1) 0%, rgba(230,94,16,1) 100%);
+}
