@@ -10,7 +10,7 @@ declare var require: any;
 })
 export class HomeComponent implements OnInit {
 
-  copyright = "2019 Anthony Sallis";
+  copyright = "2019-20 Anthony Sallis";
   page = "Home";
 
   appver = require("../../../package.json").version;
@@ -18,6 +18,8 @@ export class HomeComponent implements OnInit {
   angularver = require("../../../node_modules/@angular/core/package.json")._id;
   ngcliver = require("../../../node_modules/@angular/compiler-cli/package.json")._id;
   typescriptver = require("../../../node_modules/typescript/package.json")._id;
+
+  lastupdate = document.lastModified; // get proper 
 
   constructor() { }
 
