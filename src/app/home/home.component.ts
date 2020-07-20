@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
   ngcliver = require("../../../node_modules/@angular/compiler-cli/package.json")._id;
   typescriptver = require("../../../node_modules/typescript/package.json")._id;
 
-  lastupdate = document.lastModified; // get proper 
+  lastUpdate = new Date(document.lastModified);
 
   constructor() { }
 
