@@ -105,8 +105,27 @@ export class DataService {
       date: "1978-2005",
       using: "Analog and digital",
       show: true
+    },
+    {
+      id: 7,
+      link: "/units/unit7",
+      title: "[new category]",
+      info: "[new]]",
+      date: "[date]",
+      using: "[]",
+      show: true
+    },
+    {
+      id: 8,
+      link: "/units/webdev",
+      title: "Web development",
+      info: "Styles etc for this site",
+      date: "August 2020",
+      using: "Angular, SCSS",
+      show: true
     }
   ];
+
 
   // get contents
   public getContents(): Array<{

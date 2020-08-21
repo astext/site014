@@ -12,6 +12,7 @@ import { Unit4Component } from './components/unit4/unit4.component';
 import { Unit5Component } from './components/unit5/unit5.component';
 import { Unit6Component } from './components/unit6/unit6.component';
 import { Unit7Component } from './components/unit7/unit7.component';
+import { WebdevComponent } from './components/webdev/webdev.component';
 
 @NgModule({
   
@@ -28,7 +29,8 @@ import { Unit7Component } from './components/unit7/unit7.component';
     Unit4Component,
     Unit5Component,
     Unit6Component,
-    Unit7Component
+    Unit7Component,
+    WebdevComponent
   ]
 })
 export class UnitsModule { }

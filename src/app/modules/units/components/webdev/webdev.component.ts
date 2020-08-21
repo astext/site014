@@ -1,23 +1,20 @@
 import { Component, OnInit, ViewEncapsulation } from "@angular/core";
 import { DataService } from "../../../../data.service";
 
-
-
-
 @Component({
-  selector: "app-unit5",
-  templateUrl: "./unit5.component.html",
-  styleUrls: ["./unit5.component.scss"],
+  selector: "app-webdev",
+  templateUrl: "./webdev.component.html",
+  styleUrls: ["./webdev.component.scss"],
   encapsulation: ViewEncapsulation.None
   
 })
 
 
 
-export class Unit5Component implements OnInit {
+export class WebdevComponent implements OnInit {
 
-  copyright = "2020 Anthony Sallis";
-  page = "Unit5";
+  copyright = "2019-20 Anthony Sallis";
+  page = "Webdev";
 
 
 
@@ -45,7 +42,14 @@ export class Unit5Component implements OnInit {
    
   }
   
-  
+
+
+  // https://www.yearofmoo.com/2017/06/new-wave-of-animation-features.html#new-animation-features-full-demo
+
+  //  toggle() {
+  //    this.bindingVar == 'fadeOut' ? this.fadeIn() : this.fadeOut();
+  //  }
+
   contacts: { id: any; name: any; description: any; email: any }[];
   selectedContact: any;
 

@@ -8,8 +8,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class Unit4Component implements OnInit {
 
-  copyright = "2019 Anthony Sallis";
-  page = "Unit5";
+  copyright = "2013-2020 Anthony Sallis";
+  page = "Unit4";
 
   constructor() { }
 

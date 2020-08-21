@@ -9,6 +9,7 @@ import { Unit4Component } from "./components/unit4/unit4.component";
 import { Unit5Component } from "./components/unit5/unit5.component";
 import { Unit6Component } from "./components/unit6/unit6.component";
 import { Unit7Component } from "./components/unit7/unit7.component";
+import { WebdevComponent } from "./components/webdev/webdev.component";
 
 export const routes: Routes = [
   {
@@ -21,7 +22,8 @@ export const routes: Routes = [
       { path: "unit4", component: Unit4Component },
       { path: "unit5", component: Unit5Component },
       { path: "unit6", component: Unit6Component },
-      { path: "unit7", component: Unit7Component }
+      { path: "unit7", component: Unit7Component },
+      { path: "webdev", component: WebdevComponent }
     ]
   }
 ];
