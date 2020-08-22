@@ -1,9 +1,10 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 astextnet custom theme
-mods for site011  
+mods for site014  
 
 Anthony Sallis
 22 April 2019  
+23 August 2020
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 
@@ -761,4 +762,8 @@ $value in $font-sizes {
 
 .linear-grad4 {
   background: linear-gradient(221deg, rgba(230,197,36,1) 0%, rgba(230,94,16,1) 100%);
+}
+
+.linear-grad5 {
+  background: linear-gradient(221deg,  #55ee55 0%, #5f365c 100%);
 }

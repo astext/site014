@@ -1,3 +1,9 @@
 /*  import standard music box sass  */
 
 @import "../../../../../scss/musicbox.scss" ;
+
+.text-hieu.spcomplink {
+    &:hover {
+        color: #000 !important ;
+    }
+}

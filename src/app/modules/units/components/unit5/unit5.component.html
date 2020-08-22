@@ -1,6 +1,6 @@
 <div class="container bg-nick py-3 page-wrap">
 
-  <div id="top" class="jumbotron jumbotron-fluid bg-peter text-maria">
+  <div id="top" class="jumbotron jumbotron-fluid bg-peter text-maria linear-grad5">
     <div class="container">
       <h1 class="display-4"> PREVIEWS</h1>
       <p class="lead font-weight-bold"> <span class="material-icons">copyright</span> {{copyright}}</p>
@@ -10,7 +10,7 @@
 
       <h5 class="card-header">
                <div class="text-center">
-          <button class="btn btn-outline-anthony" (click)="show = !show">{{show ? 'Hide notes' : 'Show notes'}} </button></div>
+          <button class="btn btn-outline-maria" (click)="show = !show">{{show ? 'Hide notes' : 'Show notes'}} </button></div>
         <!-- <ng-template #elseBlock> - background to the Hill/Sallis collaborations </ng-template> -->
       </h5>
       <!-- <div class="card-body" *ngIf="show; else elseBlock"> -->
@@ -35,10 +35,7 @@
   </div>
 
 
-  <h2>Pieces</h2>
-
-  
-
+  <h2>[content]</h2>
 
   <div class="fixed-bottom float-right to-top">
     <a title="go top" href="/unit5#top" (click)="goTo($event,'top')">
