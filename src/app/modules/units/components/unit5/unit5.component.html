@@ -1,18 +1,41 @@
-<div class="container bg-hieu py-3 page-wrap">
+<div class="container bg-nick py-3 page-wrap">
 
   <div id="top" class="jumbotron jumbotron-fluid bg-peter text-maria">
     <div class="container">
-      <h1 class="display-4">Unit 5 <small> . . .</small></h1>
+      <h1 class="display-4"> PREVIEWS</h1>
       <p class="lead font-weight-bold"> <span class="material-icons">copyright</span> {{copyright}}</p>
 
       
+      <div> in development.</div>
+
+      <h5 class="card-header">
+               <div class="text-center">
+          <button class="btn btn-outline-anthony" (click)="show = !show">{{show ? 'Hide notes' : 'Show notes'}} </button></div>
+        <!-- <ng-template #elseBlock> - background to the Hill/Sallis collaborations </ng-template> -->
+      </h5>
+      <!-- <div class="card-body" *ngIf="show; else elseBlock"> -->
+      <div class="card-body" *ngIf="show">
+        <h5 class="card-title"></h5>
+        <div class="alert alert-warning" role="alert">
+          <h4 class="alert-heading">Works in progress</h4>
+          <p>....</p>
+          <hr>
+          <p class="mb-0">byline</p>
+        </div>
+  
+      </div>
+
+
+
+
+
 
 
     </div>
   </div>
 
 
-  <h2>[notes]</h2>
+  <h2>Pieces</h2>
 
   
 

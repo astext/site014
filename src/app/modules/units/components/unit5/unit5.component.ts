@@ -19,8 +19,6 @@ export class Unit5Component implements OnInit {
   copyright = "2020 Anthony Sallis";
   page = "Unit5";
 
-
-
   isOpen = false;
   showFirst= true ;
 
@@ -46,16 +44,22 @@ export class Unit5Component implements OnInit {
   }
   
   
-  contacts: { id: any; name: any; description: any; email: any }[];
-  selectedContact: any;
+ // show hide
+ showBlock: boolean=true ;
+ show: boolean = false;
+ 
+ 
+ toggleContent() {
+   this.showBlock = !this.showBlock ;
+ }
+
+
+
 
   constructor(public dataService: DataService) {}
 
   ngOnInit() {
-    this.contacts = this.dataService.getContacts();
-
+    
   }
-  public selectContact(contact) {
-    this.selectedContact = contact;
-  }
+ 
 }
