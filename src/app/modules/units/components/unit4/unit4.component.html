@@ -1,26 +1,31 @@
-<div class="container bg-primary py-3 page-wrap">
+<div class="container bg-peter py-3 page-wrap">
 
-  <div class="jumbotron jumbotron-fluid bg-john text-anthony">
+  <div class="jumbotron jumbotron-fluid bg-ruby text-dark">
     <div class="container">
-      <h1 class="display-4">Unit 4 - Soundcloud</h1>
+      <h1 class="display-4">On SoundCloud</h1>
       <p class="lead font-weight-bold"> <span class="material-icons">copyright</span> {{copyright}}</p>
 
     </div>
   </div>
 
-    <h2 class="py-3">Speedcomp entries</h2>
+  <h2 class="py-3 text-white">Speedcomps</h2>
 
+  <div class="bg-nick" style="border-color: red;padding: 1rem;">
+    <h3><a href="https://soundcloud.com/anthony-sallis-2/">
+        <span style="color: darkgreen;" class="material-icons">alternate_email</span>SoundCloud</a></h3>
+  </div>
 
-    <div class="bg-nick" style="border-color: red;padding: 1rem;">
+  <div class="bg-nick" style="border-color: red;padding: 1rem;">
 
-      <h3><a href="https://soundcloud.com/anthony-sallis-2/23jan15-anthonysallis-speedcomp13">Speedcomp 13 at SoundCloud</a></h3>
-
-      
-    
-    
-    </div>
-
-
-
+    <iframe width="100%" height="600" scrolling="yes" frameborder="no" allow="autoplay"
+      src="https://w.soundcloud.com/player/?url=https://soundcloud.com/anthony-sallis-2/sets/speedcomps&amp;auto_play=false&amp;buying=true&amp;liking=true&amp;download=true&amp;sharing=true&amp;show_artwork=true&amp;show_comments=true&amp;show_playcount=true&amp;show_user=true&amp;hide_related=false&amp;visual=true&amp;start_track=0&amp;callback=true">
+    </iframe>
+  </div>
 
 </div>
+<script>
+  var iframeElement = document.querySelector('iframe');
+  var iframeElementID = iframeElement.id;
+  var widget1 = SC.Widget(iframeElement);
+  var widget2 = SC.Widget(iframeElementID);
+</script>
