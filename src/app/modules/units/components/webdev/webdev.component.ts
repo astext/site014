@@ -13,7 +13,7 @@ import { DataService } from "../../../../data.service";
 
 export class WebdevComponent implements OnInit {
 
-  copyright = "2019-20 Anthony Sallis";
+  copyright = "2017-20 Anthony Sallis";
   page = "Webdev";
 
 
