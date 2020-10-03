@@ -2,5 +2,5 @@
 
 Music and web in the latest Angular.
 
-July 2020
+October 2020
 
