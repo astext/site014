@@ -1,6 +1,6 @@
 {
   "name": "site014",
-  "version": "5.5.0",
+  "version": "5.6.0",
   "repository": "https://github.com/astext/site014",
   "description": "Web development and original music by Anthony Sallis",
   "keywords": [
@@ -35,7 +35,7 @@
     "@angular/router": "~10.2.2",
     "@popperjs/core": "^2.5.4",
     "bootstrap": "^4.5.3",
-    "howler": "^2.2.0",
+    "howler": "^2.2.1",
     "jquery": "^3.5.1",
     "material-design-icons-iconfont": "^5.0.1",
     "rxjs": "~6.6.3",
