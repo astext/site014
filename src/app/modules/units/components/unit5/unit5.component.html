@@ -5,12 +5,13 @@
       <h1 class="display-4"> PREVIEWS</h1>
       <p class="lead font-weight-bold"> <span class="material-icons">copyright</span> {{copyright}}</p>
 
-      
-      <div> Ableton 10 pieces in development.</div>
+
+      <div> Ableton 10/11 pieces in development.</div>
 
       <h5 class="card-header">
-               <div class="text-center">
-          <button class="btn btn-outline-maria" (click)="show = !show">{{show ? 'Hide notes' : 'Show notes'}} </button></div>
+        <div class="text-center">
+          <button class="btn btn-outline-maria" (click)="show = !show">{{show ? 'Hide notes' : 'Show notes'}} </button>
+        </div>
         <!-- <ng-template #elseBlock> - background to the Hill/Sallis collaborations </ng-template> -->
       </h5>
       <!-- <div class="card-body" *ngIf="show; else elseBlock"> -->
@@ -22,7 +23,7 @@
           <hr>
           <p class="mb-0">byline</p>
         </div>
-  
+
       </div>
 
 
@@ -35,7 +36,24 @@
   </div>
 
 
-  <h2>[content]</h2>
+  <h2>Recent projects</h2>
+
+
+  <div class="row">
+    
+    <div class="col-sm-12 col-md-6">
+      <img class="img-fluid pb-3" src="assets/img/screenshot-ableton previews-01.png">
+    </div>
+    <div class="col-sm-12 col-md-5">
+      <img class="img-fluid" src="assets/img/screenshot-ableton previews-02.png">
+    </div>
+
+
+
+  </div>
+
+
+
 
   <div class="fixed-bottom float-right to-top">
     <a title="go top" href="/unit5#top" (click)="goTo($event,'top')">

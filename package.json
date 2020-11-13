@@ -1,15 +1,14 @@
 {
   "name": "site014",
-  "version": "5.6.0",
+  "version": "6.0.0",
   "repository": "https://github.com/astext/site014",
   "description": "Web development and original music by Anthony Sallis",
   "keywords": [
     "Angular",
-    "Bootstrap",
-    "original music",
-    "electronica",
+    "Original music",
+    "Electronica",
     "Ableton Live",
-    "web development"
+    "Web development"
   ],
   "author": "Anthony Sallis <astext@gmail.com> (http://astext.net/)",
   "contributors": [
