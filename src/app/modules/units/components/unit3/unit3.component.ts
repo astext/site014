@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { Unit3Service } from 'src/app/unit3.service';
+import { Unit3Service } from 'src/app/services/unit3.service';
 
 @Component({
   selector: 'app-unit3',
