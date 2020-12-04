@@ -5,7 +5,9 @@
 @import "../../../../../styles.scss";
 
 
-
+.webdev-gradient {
+  background: linear-gradient(to right, rgb(255, 224, 0), rgb(121, 159, 12));
+}
 
 
 table.testbed {
