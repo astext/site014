@@ -24,21 +24,17 @@
   </div>
 
 
-  <h2>Dev notes</h2>
+  <h2 class="swatch-dgreens10 text-anthony p-2">Dev notes</h2>
   <p class="text-hieu">Site 14: Dec 2020 added expiring notice application prototype.</p>
   <p class="text-hieu">Site 14: Nov 2020 updated site to Angular 11</p>
   <p class="text-hieu">Site 14: Aug-Sep 2020 reorder modules, freshen up, adding content.</p>
-  <p class="text-hieu">Site 12: (Sept19 to May20)superceded due to Ivy compiler error - ngcc - on upgrading Angular CLI.
-    Solution was to
-    create new Angular app site013 and migrate content.</p>
-  <p class="text-hieu">Site 13: superceded due to Angular upgrade compatibility fails. Solution was to create new
-    Angular app site014 and migrate content. (Sept 2019 to June 2020.)</p>
+  <p class="text-hieu">Site 13: superceded due to Angular 10 upgrade compatibility fails. Solution was to create new Angular 10 app site014 and migrate content. (Sept 2019 to June 2020.)</p>
+  <p class="text-hieu">Site 12: (Sept19 to May20) superceded due to Ivy compiler error - ngcc - on upgrading to Angular 9. Solution was to create new Angular app site013 and migrate content.</p>
 
 
-
-  <div class="row pb-3">
-    <div class="col-sm-12">
-      <h2 class="pt-1 pb-3 text-anthony">Expiring notice application</h2>
+  <div class="row">
+    <div class="col-sm-12 mb-5">
+      <h2 class="swatch-dgreens10 text-anthony p-2 mb-3">Expiring notice application</h2>
 
 
       <div *ngIf="getNow <= setEnd; else expired" class="expiring-notice-wrapper">
@@ -48,11 +44,16 @@
         </div>
 
         <div class="entext">
-          <div class="">From: {{startDate}}</div>
-          <div class="">To: {{endDate}}</div>
-          <div class="">In:
-            <span *ngIf="!hoursLeftwhole < 1"> {{hoursLeftwhole}} hours</span>
-            {{minsLeft}}m</div>
+          <div class="pb-1">From:
+            <span class="swatch-yellows06">{{startDate}}</span></div>
+          <div class="pb-1">To:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="swatch-yellows06">{{endDate}}</span>
+          </div>
+          <div class="">In:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="swatch-doranges09 text-white">
+              <span *ngIf="hoursLeftwhole >= 1"> {{hoursLeftwhole}} h</span>
+              {{minsLeft}} m
+            </span>
+          </div>
         </div>
 
       </div>
@@ -65,9 +66,10 @@
           </div>
 
           <div class="entext expired">
-            <div class="h3">Message expired!</div> 
-            <div>Was visible from {{startDate | date: "MMMM dd, yyyy hh:mm"}} until
-            {{endDate | date: "MMMM dd, yyyy hh:mm"}}</div>
+            <div class="h3">Message expired!</div>
+            <div>Was visible from <span class="swatch-yellows06">{{startDate | date: "MMMM dd, yyyy hh:mm"}}</span>
+              until <span class="swatch-yellows06">
+                {{endDate | date: "MMMM dd, yyyy hh:mm"}}</span></div>
           </div>
         </div>
 
@@ -80,7 +82,7 @@
 
 
 
-  <h2 id="inhouse" class="mt-3  text-anthony">Inhouse palette</h2>
+  <h2 id="inhouse" class="swatch-dgreens10 text-anthony p-2">Inhouse palette</h2>
 
   <div class="my-3 internal-nav font-20">
 

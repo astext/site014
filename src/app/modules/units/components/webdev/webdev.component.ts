@@ -59,7 +59,7 @@ export class WebdevComponent implements OnInit {
   setEnd = this.setStart + this.aDay ; // alter to trip expired
   endDate = new Date(this.setEnd) ;
   
-  getNow: number;
+  getNow: any;
   timeLeft: any;
   hoursLeftraw: any;
   hoursLeft: any;
@@ -74,6 +74,7 @@ export class WebdevComponent implements OnInit {
     this.hoursLeftraw = this.timeLeft / this.anHour;
     this.hoursLeft = this.hoursLeftraw.toFixed(2);
     this.hoursLeftwhole = parseInt(this.hoursLeftraw) ;
+    console.log("hrs left whole: ",this.hoursLeftwhole);
     this.minsLeft = this.hoursLeft - this.hoursLeftwhole ;
     this.minsLeft = (this.minsLeft * 60).toFixed(0) ;
 
