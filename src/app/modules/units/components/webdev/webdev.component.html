@@ -5,7 +5,7 @@
       <h1 class="display-4">Web dev</h1>
       <p class="lead font-weight-bold"> <span class="material-icons">copyright</span> {{copyright}}</p>
 
-      <div class="mt-3 internal-nav font-20">
+      <!-- <div class="mt-3 internal-nav font-20">
 
         <ul class="nav list-unstyled pl-3">
           <li><a href="/unit5#inhouse" (click)="goTo($event,'inhouse')">Inhouse</a></li>
@@ -17,7 +17,7 @@
           <li><a href="/unit5#dbrowns" (click)="goTo($event,'dbrowns')">Browns</a></li>
         </ul>
 
-      </div>
+      </div> -->
 
 
     </div>
@@ -25,15 +25,78 @@
 
 
   <h2>Dev notes</h2>
+  <p class="text-hieu">Site 14: Dec 2020 added expiring notice application prototype.</p>
+  <p class="text-hieu">Site 14: Nov 2020 updated site to Angular 11</p>
   <p class="text-hieu">Site 14: Aug-Sep 2020 reorder modules, freshen up, adding content.</p>
-  <p class="text-hieu">Site 12: (Sept19 to May20)superceded due to Ivy compiler error - ngcc - on upgrading Angular CLI. Solution was to
+  <p class="text-hieu">Site 12: (Sept19 to May20)superceded due to Ivy compiler error - ngcc - on upgrading Angular CLI.
+    Solution was to
     create new Angular app site013 and migrate content.</p>
   <p class="text-hieu">Site 13: superceded due to Angular upgrade compatibility fails. Solution was to create new
     Angular app site014 and migrate content. (Sept 2019 to June 2020.)</p>
 
-  <h3 id="inhouse" class="text-john">Inhouse palette</h3>
 
-  <p class="text-anthony">Programatic SCSS variations from these base colours:</p>
+
+  <div class="row pb-3">
+    <div class="col-sm-12">
+      <h2 class="pt-1 pb-3 text-anthony">Expiring notice application</h2>
+
+
+      <div *ngIf="getNow <= setEnd; else expired" class="expiring-notice-wrapper">
+
+        <div class="enicon">
+          <span class="material-icons timer"></span>
+        </div>
+
+        <div class="entext">
+          <div class="">From: {{startDate}}</div>
+          <div class="">To: {{endDate}}</div>
+          <div class="">In:
+            <span *ngIf="!hoursLeftwhole < 1"> {{hoursLeftwhole}} hours</span>
+            {{minsLeft}}m</div>
+        </div>
+
+      </div>
+
+      <ng-template #expired>
+
+        <div class="expiring-notice-wrapper">
+          <div class="enicon">
+            <span class="material-icons timer_off"></span>
+          </div>
+
+          <div class="entext expired">
+            <div class="h3">Message expired!</div> 
+            <div>Was visible from {{startDate | date: "MMMM dd, yyyy hh:mm"}} until
+            {{endDate | date: "MMMM dd, yyyy hh:mm"}}</div>
+          </div>
+        </div>
+
+      </ng-template>
+
+
+    </div>
+  </div>
+
+
+
+
+  <h2 id="inhouse" class="mt-3  text-anthony">Inhouse palette</h2>
+
+  <div class="my-3 internal-nav font-20">
+
+    <ul class="nav list-unstyled pl-3">
+      <li><a href="/unit5#inhouse" (click)="goTo($event,'inhouse')">Inhouse</a></li>
+      <li><a href="/unit5#yellows" (click)="goTo($event,'yellows')">Yellows</a></li>
+      <li><a href="/unit5#blues" (click)="goTo($event,'blues')">Blues</a></li>
+      <li><a href="/unit5#doranges" (click)="goTo($event,'doranges')">Oranges</a></li>
+      <li><a href="/unit5#dgreens" (click)="goTo($event,'dgreens')">Greens</a></li>
+      <li><a href="/unit5#dpurples" (click)="goTo($event,'dpurples')">Purples</a></li>
+      <li><a href="/unit5#dbrowns" (click)="goTo($event,'dbrowns')">Browns</a></li>
+    </ul>
+
+  </div>
+
+  <p class="text-anthony">Programmatic SCSS variations from these base colours:</p>
 
   <div class="mt-3 p-3 d-flex flex-wrap text-white bg-hieu">
     <div class="swatch-inhouse01 flex-fill px-3 py-1">darkbrown 01</div>

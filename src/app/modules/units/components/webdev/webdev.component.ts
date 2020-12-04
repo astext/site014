@@ -13,7 +13,7 @@ import { DataService } from "../../../../data.service";
 
 export class WebdevComponent implements OnInit {
 
-  copyright = "2017-20 Anthony Sallis";
+  copyright = "2017-21 Anthony Sallis";
   page = "Webdev";
 
 
@@ -42,24 +42,58 @@ export class WebdevComponent implements OnInit {
    
   }
   
+// EXPIRING NOTICE
+// (C) 2020 Anthony Sallis with additional assistance from John McInnes
+  // https://codechi.com/dev-tools/date-to-millisecond-calculators/comment-page-1/
+  // set milliseconds for start 
+  // (or console: let a = new Date().getTime(), then, a)
 
+  aMinute = 60000 ;
+  anHour = this.aMinute * 60 ;
+  aDay = this.anHour * 24 ;
+  aWeek = this.aDay * 7 ;
 
-  // https://www.yearofmoo.com/2017/06/new-wave-of-animation-features.html#new-animation-features-full-demo
+  setStart = 1607109670409 ;
+  startDate = new Date(this.setStart) ;
 
-  //  toggle() {
-  //    this.bindingVar == 'fadeOut' ? this.fadeIn() : this.fadeOut();
-  //  }
+  setEnd = this.setStart + this.aDay ; // alter to trip expired
+  endDate = new Date(this.setEnd) ;
+  
+  getNow: number;
+  timeLeft: any;
+  hoursLeftraw: any;
+  hoursLeft: any;
+  hoursLeftwhole: any ;
+  minsLeft: any ;
 
-  contacts: { id: any; name: any; description: any; email: any }[];
-  selectedContact: any;
+  constructor() {   }
 
-  constructor(public dataService: DataService) {}
+  ngOnInit(): void {
+    this.getNow = Date.now();
+    this.timeLeft = this.setEnd - this.getNow;
+    this.hoursLeftraw = this.timeLeft / this.anHour;
+    this.hoursLeft = this.hoursLeftraw.toFixed(2);
+    this.hoursLeftwhole = parseInt(this.hoursLeftraw) ;
+    this.minsLeft = this.hoursLeft - this.hoursLeftwhole ;
+    this.minsLeft = (this.minsLeft * 60).toFixed(0) ;
 
-  ngOnInit() {
-    this.contacts = this.dataService.getContacts();
+    //console.log(this.hoursLeftwhole, this.minsLeft);
+        
+    setInterval(this._timerVal.bind(this), 30000);
+  }
+
+  private _timerVal(){
+    
+    this.getNow = Date.now();
+    this.timeLeft = this.setEnd - this.getNow;
+    this.hoursLeftraw = this.timeLeft / this.anHour;
+    this.hoursLeft = this.hoursLeftraw.toFixed(2);
+
+    this.hoursLeftwhole = parseInt(this.hoursLeftraw);
+    this.minsLeft = this.hoursLeft - this.hoursLeftwhole;
+    this.minsLeft = (this.minsLeft * 60).toFixed(0);
 
   }
-  public selectContact(contact) {
-    this.selectedContact = contact;
-  }
+
+  
 }
