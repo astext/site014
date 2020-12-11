@@ -53,10 +53,10 @@ export class WebdevComponent implements OnInit {
   aDay = this.anHour * 24 ;
   aWeek = this.aDay * 7 ;
 
-  setStart = 1607109670409 ;
+  setStart = 1607671021835 ;
   startDate = new Date(this.setStart) ;
 
-  setEnd = this.setStart + this.aDay ; // alter to trip expired
+  setEnd = this.setStart + this.aWeek ; // make current restart timer 
   endDate = new Date(this.setEnd) ;
   
   getNow: any;
