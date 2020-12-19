@@ -53,7 +53,7 @@ export class WebdevComponent implements OnInit {
   aDay = this.anHour * 24 ;
   aWeek = this.aDay * 7 ;
 
-  setStart = 1607671021835 ;
+  setStart = 1608406604600 ;
   startDate = new Date(this.setStart) ;
 
   setEnd = this.setStart + this.aWeek ; // make current restart timer 

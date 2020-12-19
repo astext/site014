@@ -1,6 +1,5 @@
-import { Component, ViewEncapsulation, OnInit } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit, Input } from '@angular/core';
 
-declare var require: any;
 
 @Component({
   selector: 'app-home',
@@ -10,16 +9,10 @@ declare var require: any;
 })
 export class HomeComponent implements OnInit {
 
-  copyright = "2019-20 Anthony Sallis";
-  page = "Home";
+  copyright = "2019-21 Anthony Sallis";
+  @Input() partName = "Home page";
 
-  appver = require("../../../package.json").version;
-  bootstrapver = require("../../../node_modules/bootstrap/package.json").version;
-  angularver = require("../../../node_modules/@angular/core/package.json")._id;
-  ngcliver = require("../../../node_modules/@angular/compiler-cli/package.json")._id;
-  typescriptver = require("../../../node_modules/typescript/package.json")._id;
-
-  lastUpdate = new Date(document.lastModified);
+  
 
   constructor() { }
 
