@@ -264,7 +264,8 @@ $navyblue: #000080 !default;
 
 $inhousePalette: () !default;
 
-$inhousePalette: map-merge((01: $darkbrown,
+$inhousePalette: map-merge((
+01: $darkbrown,
 02: $darkpurple,
 03: $darkgreen,
 04: $darkorange,
@@ -292,10 +293,10 @@ $yellows01: adjust-hue($hivisyellow, (.1 * 360)) !default;
 $yellows02: adjust-hue($hivisyellow, (.3 * 360)) !default;
 $yellows03: adjust-hue($hivisyellow, (.5 * 360)) !default;
 $yellows04: adjust-hue($hivisyellow, (.7 * 360)) !default;
-$yellows05: lighten($hivisyellow, (.1 * 360)) !default;
-$yellows06: lighten($hivisyellow, (.25 * 360)) !default;
-$yellows07: saturate($hivisyellow, (.15 * 360)) !default;
-$yellows08: darken($hivisyellow, (.15 * 360)) !default;
+$yellows05: lighten($hivisyellow, 10%) !default;
+$yellows06: lighten($hivisyellow, 25%) !default;
+$yellows07: saturate($hivisyellow, 15%) !default;
+$yellows08: darken($hivisyellow, 15%) !default;
 $yellows09: desaturate($hivisyellow, 10%) !default;
 $yellows10: desaturate($hivisyellow, 30%) !default;
 $yellows11: desaturate($hivisyellow, 50%) !default;
@@ -306,7 +307,8 @@ $yellows12: desaturate($hivisyellow, 80%) !default;
 
 $yellowsPalette: () !default;
 
-$yellowsPalette: map-merge((01: $yellows01,
+$yellowsPalette: map-merge((
+01: $yellows01,
 02: $yellows02,
 03: $yellows03,
 04: $yellows04,
@@ -334,10 +336,10 @@ $yellowsPalette);
 
 // blues
 
-$blues01: adjust-hue($brightblue, (.5 *360)) !default;
-$blues02: adjust-hue($brightblue, (.15 *360)) !default;
-$blues03: adjust-hue($brightblue, (.25 *360)) !default;
-$blues04: adjust-hue($brightblue, (.4 *360)) !default;
+$blues01: adjust-hue($brightblue, (.1 *360)) !default;
+$blues02: adjust-hue($brightblue, (.3 *360)) !default;
+$blues03: adjust-hue($brightblue, (.5 *360)) !default;
+$blues04: adjust-hue($brightblue, (.7 *360)) !default;
 $blues05: invert($brightblue, 10%) !default;
 $blues06: invert($brightblue, 25%) !default;
 $blues07: invert($brightblue, 35%) !default;
@@ -352,7 +354,8 @@ $blues12: desaturate($brightblue, 70%) !default;
 
 $bluesPalette: () !default;
 
-$bluesPalette: map-merge((01: $blues01,
+$bluesPalette: map-merge((
+01: $blues01,
 02: $blues02,
 03: $blues03,
 04: $blues04,
@@ -399,7 +402,8 @@ $doranges12: desaturate($darkorange, 70%) !default;
 
 $dorangesPalette: () !default;
 
-$dorangesPalette: map-merge((01: $doranges01,
+$dorangesPalette: map-merge((
+01: $doranges01,
 02: $doranges02,
 03: $doranges03,
 04: $doranges04,
@@ -446,7 +450,8 @@ $dgreens12: desaturate($darkgreen, 70%) !default;
 
 $dgreensPalette: () !default;
 
-$dgreensPalette: map-merge((01: $dgreens01,
+$dgreensPalette: map-merge((
+01: $dgreens01,
 02: $dgreens02,
 03: $dgreens03,
 04: $dgreens04,
@@ -493,7 +498,8 @@ $dpurples12: desaturate($darkpurple, 60%) !default;
 
 $dpurplesPalette: () !default;
 
-$dpurplesPalette: map-merge((01: $dpurples01,
+$dpurplesPalette: map-merge((
+01: $dpurples01,
 02: $dpurples02,
 03: $dpurples03,
 04: $dpurples04,
@@ -541,7 +547,8 @@ $dbrowns12: ddarken($darkbrown, 50%) !default;
 
 $dbrownsPalette: () !default;
 
-$dbrownsPalette: map-merge((01: $dbrowns01,
+$dbrownsPalette: map-merge((
+01: $dbrowns01,
 02: $dbrowns02,
 03: $dbrowns03,
 04: $dbrowns04,
@@ -566,10 +573,6 @@ $dbrownsPalette);
 }
 
 // use: background-color: dbrowns(02) ;
-
-
-
-
 
 .bg-paleyellow {
   background-color: $paleyellow;
@@ -657,7 +660,8 @@ $dbrownsPalette);
 
 $spacer: 1rem;
 $spacers: () !default;
-$spacers: map-merge((6: ($spacer * 2),
+$spacers: map-merge((
+6: ($spacer * 2),
 7: ($spacer * 2.5),
 8: ($spacer * 3),
 9: ($spacer * 3.5),
@@ -686,7 +690,8 @@ $font-size-base: 1rem;
 }
 
 $font-sizes: () !default;
-$font-sizes: map-merge((8: sizeMultiplier(.5),
+$font-sizes: map-merge((
+8: sizeMultiplier(.5),
 10: sizeMultiplier(.625),
 12: sizeMultiplier(.75),
 13: sizeMultiplier(.8125),
@@ -711,7 +716,8 @@ $font-sizes: map-merge((8: sizeMultiplier(.5),
 50: sizeMultiplier(3.125)), $font-sizes);
 
 $font-weights: () !default;
-$font-weights: map-merge((0: weightMultiplier(),
+$font-weights: map-merge((
+0: weightMultiplier(),
 1: weightMultiplier(1),
 2: weightMultiplier(2),
 3: weightMultiplier(3),
