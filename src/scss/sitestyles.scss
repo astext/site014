@@ -242,6 +242,13 @@ $enable-print-styles: true !default;
 
 /* some inhouse colours */
 
+/* scss breaking changes
+      hue needs deg or unitless
+      saturation/lightness needs % 
+      See https://sass-lang.com/d/color-units     
+*/
+
+
 $darkbrown: #654321 !default;
 $darkbrownsat: saturate(#654321, 20%) !default;
 $darkpurple: #4f0e5a !default;
@@ -250,7 +257,7 @@ $darkorange: #e22510 !default;
 $brightblue: #0000CD !default;
 $paleyellow: #ffffb8 !default;
 $hivisyellow: #ffcc00 !default;
-$hivisyellowhue: adjust-hue(#ffcc00, 15%) !default;
+$hivisyellowhue: adjust-hue(#ffcc00, (.15 * 360) ) !default;
 $navyblue: #000080 !default;
 
 // palette map the inhouse colours
@@ -281,14 +288,14 @@ $inhousePalette);
 
 // yellows
 
-$yellows01: adjust-hue($hivisyellow, 10%) !default;
-$yellows02: adjust-hue($hivisyellow, 30%) !default;
-$yellows03: adjust-hue($hivisyellow, 50%) !default;
-$yellows04: adjust-hue($hivisyellow, 70%) !default;
-$yellows05: lighten($hivisyellow, 10%) !default;
-$yellows06: lighten($hivisyellow, 25%) !default;
-$yellows07: saturate($hivisyellow, 15%) !default;
-$yellows08: darken($hivisyellow, 15%) !default;
+$yellows01: adjust-hue($hivisyellow, (.1 * 360)) !default;
+$yellows02: adjust-hue($hivisyellow, (.3 * 360)) !default;
+$yellows03: adjust-hue($hivisyellow, (.5 * 360)) !default;
+$yellows04: adjust-hue($hivisyellow, (.7 * 360)) !default;
+$yellows05: lighten($hivisyellow, (.1 * 360)) !default;
+$yellows06: lighten($hivisyellow, (.25 * 360)) !default;
+$yellows07: saturate($hivisyellow, (.15 * 360)) !default;
+$yellows08: darken($hivisyellow, (.15 * 360)) !default;
 $yellows09: desaturate($hivisyellow, 10%) !default;
 $yellows10: desaturate($hivisyellow, 30%) !default;
 $yellows11: desaturate($hivisyellow, 50%) !default;
@@ -327,10 +334,10 @@ $yellowsPalette);
 
 // blues
 
-$blues01: adjust-hue($brightblue, 5%) !default;
-$blues02: adjust-hue($brightblue, 15%) !default;
-$blues03: adjust-hue($brightblue, 25%) !default;
-$blues04: adjust-hue($brightblue, 40%) !default;
+$blues01: adjust-hue($brightblue, (.5 *360)) !default;
+$blues02: adjust-hue($brightblue, (.15 *360)) !default;
+$blues03: adjust-hue($brightblue, (.25 *360)) !default;
+$blues04: adjust-hue($brightblue, (.4 *360)) !default;
 $blues05: invert($brightblue, 10%) !default;
 $blues06: invert($brightblue, 25%) !default;
 $blues07: invert($brightblue, 35%) !default;
@@ -374,10 +381,10 @@ $bluesPalette);
 
 // dark oranges
 
-$doranges01: adjust-hue($darkorange, 10%) !default;
-$doranges02: adjust-hue($darkorange, 30%) !default;
-$doranges03: adjust-hue($darkorange, 50%) !default;
-$doranges04: adjust-hue($darkorange, 70%) !default;
+$doranges01: adjust-hue($darkorange, (.1 *360)) !default;
+$doranges02: adjust-hue($darkorange, (.3 *360)) !default;
+$doranges03: adjust-hue($darkorange, (.5 *360)) !default;
+$doranges04: adjust-hue($darkorange, (.7 *360)) !default;
 $doranges05: invert($darkorange, 10%) !default;
 $doranges06: invert($darkorange, 25%) !default;
 $doranges07: invert($darkorange, 35%) !default;
@@ -421,10 +428,10 @@ $dorangesPalette);
 
 // dark greens
 
-$dgreens01: adjust-hue($darkgreen, 10%) !default;
-$dgreens02: adjust-hue($darkgreen, 30%) !default;
-$dgreens03: adjust-hue($darkgreen, 50%) !default;
-$dgreens04: adjust-hue($darkgreen, 70%) !default;
+$dgreens01: adjust-hue($darkgreen, (.1 *360)) !default;
+$dgreens02: adjust-hue($darkgreen, (.3 *360)) !default;
+$dgreens03: adjust-hue($darkgreen, (.5 *360)) !default;
+$dgreens04: adjust-hue($darkgreen, (.7 *360)) !default;
 $dgreens05: invert($darkgreen, 10%) !default;
 $dgreens06: invert($darkgreen, 25%) !default;
 $dgreens07: invert($darkgreen, 35%) !default;
@@ -468,10 +475,10 @@ $dgreensPalette);
 
 // dark purple
 
-$dpurples01: adjust-hue($darkpurple, 10%) !default;
-$dpurples02: adjust-hue($darkpurple, 30%) !default;
-$dpurples03: adjust-hue($darkpurple, 50%) !default;
-$dpurples04: adjust-hue($darkpurple, 70%) !default;
+$dpurples01: adjust-hue($darkpurple, (.1 *360)) !default;
+$dpurples02: adjust-hue($darkpurple, (.3 *360)) !default;
+$dpurples03: adjust-hue($darkpurple, (.5 *360)) !default;
+$dpurples04: adjust-hue($darkpurple, (.7 *360)) !default;
 $dpurples05: invert($darkpurple, 10%) !default;
 $dpurples06: invert($darkpurple, 25%) !default;
 $dpurples07: invert($darkpurple, 35%) !default;
@@ -516,10 +523,10 @@ $dpurplesPalette);
 
 // dark brown
 
-$dbrowns01: adjust-hue($darkbrown, 10%) !default;
-$dbrowns02: adjust-hue($darkbrown, 30%) !default;
-$dbrowns03: adjust-hue($darkbrown, 50%) !default;
-$dbrowns04: adjust-hue($darkbrown, 70%) !default;
+$dbrowns01: adjust-hue($darkbrown, (.1 *360)) !default;
+$dbrowns02: adjust-hue($darkbrown, (.3 *360)) !default;
+$dbrowns03: adjust-hue($darkbrown, (.5 *360)) !default;
+$dbrowns04: adjust-hue($darkbrown, (.7 *360)) !default;
 $dbrowns05: invert($darkbrown, 10%) !default;
 $dbrowns06: invert($darkbrown, 25%) !default;
 $dbrowns07: invert($darkbrown, 35%) !default;
