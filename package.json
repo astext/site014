@@ -1,6 +1,6 @@
 {
   "name": "site014",
-  "version": "8.1.0",
+  "version": "8.2.0",
   "repository": "https://github.com/astext/site014",
   "description": "Original music and web development by Anthony Sallis",
   "keywords": [
@@ -24,14 +24,14 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~12.0.2",
-    "@angular/common": "~12.0.2",
-    "@angular/compiler": "~12.0.2",
-    "@angular/core": "~12.0.2",
-    "@angular/forms": "~12.0.2",
-    "@angular/platform-browser": "~12.0.2",
-    "@angular/platform-browser-dynamic": "~12.0.2",
-    "@angular/router": "~12.0.2",
+    "@angular/animations": "~12.0.3",
+    "@angular/common": "~12.0.3",
+    "@angular/compiler": "~12.0.3",
+    "@angular/core": "~12.0.3",
+    "@angular/forms": "~12.0.3",
+    "@angular/platform-browser": "~12.0.3",
+    "@angular/platform-browser-dynamic": "~12.0.3",
+    "@angular/router": "~12.0.3",
     "@popperjs/core": "^2.9.2",
     "bootstrap": "^4.6.0",
     "howler": "^2.2.1",
@@ -43,9 +43,9 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~12.0.2",
-    "@angular/cli": "~12.0.2",
-    "@angular/compiler-cli": "~12.0.2",
+    "@angular-devkit/build-angular": "~12.0.3",
+    "@angular/cli": "~12.0.3",
+    "@angular/compiler-cli": "~12.0.3",
     "@types/jasmine": "^3.6.9",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.20.7",
